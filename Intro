@@ -1,0 +1,22 @@
+GENERATIVE AI 
+    -- is a LLM Model built on ML using DL techniques to generate new data.(text,audio,video)
+
+DEEP LEARNING MODELS DIVIDED INTO
+    1.DISCRIMINATIVE MODEL(supervised) - learns relationship b/w Labelled data(uses conditionl Probability)
+    2.GENERATIVE MODEL(unsupervised) - learns patterns in unstructured content(learns Joint Probability Distn & predicts by conditionl Probability)
+
+Generative AI Pipeline 
+  Steps to be followed
+   --Data Acquisition
+        -Whether Data Available(docx,pdf,xlsx,csv,txt)
+        -Other Data(collecting data from DB, API, Web Scrapping)
+        -No Data-->Create your Own data using LLM [if u have less data you can do data augmentation]
+   --Data Preparation
+   --Feature Engineering
+   --Modeling
+   --Evaluation
+   --Deployment
+   --Monitoring & Model Updating
+
+
+
