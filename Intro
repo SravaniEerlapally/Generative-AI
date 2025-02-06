@@ -18,5 +18,9 @@ Generative AI Pipeline
    --Deployment
    --Monitoring & Model Updating
 
+Strong proficiency in Python with experience using Flask, FastAPI, Gunicorn, and Nginx.
+- Familiarity with AWS services like S3, SageMaker, EC2, and Lambda.
+- Hands-on experience in AI/ML, including NLP, sentiment analysis, topic modeling, Hugging Face models, RAG, LLM fine-tuning, or Stability AI models.
+- Proficiency in database interaction using Python, with a strong foundation in MySQL or postgress.
 
 
