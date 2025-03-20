@@ -1,1 +1,41 @@
+Gen AI EVOLUTION
+Statistical ML -> Neural Networks -> RNN -> Transformers==>Text Modeli)BERT ii) GPT(Generative Pretrained Transformer)
+                                                  \/
+                                              Image Model=>Stable Diffusion ii) DALL-E
+                                              Video Model=> OpenAI Sora
+
+Language Model - is an AI  model that can predict the nextword(or set of words) for a given sequence of words.
+
+SELF-SUPERVISED-LEARNING
+Suppose I have a given some information and some sentences with blanks.
+You need to fill them correctly based on above info, this can be filled by Neural Networks.
+When data is short, it done in this way.
+
+When data is large we use LLM(Large Language Models) i.e GPT-4 175 Billion Parameters
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
