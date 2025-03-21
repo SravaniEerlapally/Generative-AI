@@ -20,24 +20,91 @@ Embeddings->  numeric representation of text in form of vector such that we capt
 eg:Paris-France+India = Delhi ii) Apple - TimKook + Satya Nadella = Microsoft
 
 Semantic Search -> searching using the context of that sentence . Internally uses word embedding
-VectorDatabse->
-  - used to do faster and Optimize Storage
+VectorDatabse-> 
+  Locality Sensitive Hashing 
+  - used to do faste rSearch  and Optimize Storage
 
+RAG[Retrieval  Augmented Generation]
+Eg: OpenBook Exam , means appear exam with book and attend the exam
+In same way RAG take Question and FRom DB's at backend searches the best ans and answers in frontend
 
+Tools For GenAI => We need some 
+                    i)LLM Model/OpenSource Model(GPT4 Llama2 Mistral)
+                    ii)Cloud Service(Azure OpenAI Serviceor Amazon Bedrock)
+                    iii)Framework like LangChain, HuggingFace Transformers, For DL Libraries Tensorflow or Pytorch
 
+LangChain
+ - is a framework that allows you to build applications using LLMs
 
+CODE
+from secret_key import openapi_key
+import os
+os.environ['OPENAI_API_KEY'] = openapi_key
 
+from langchain.llms import OpenAI
 
+llm = OpenAI(temperature=0.6) #where temperature setting from 0 to 1 if 0 its safe , if 1 gives worst but that will be creative
+name = llm("I want to open a cafe with healthy ingredients like millets. Suggest some attrative names")
+print(name)
 
+from langchain.prompts import PromptTemplate
 
+prompt_template_name = PromptTemplate(
+   input_variables = ['cuisine'],
+   template = "I want to open a cafe for {cuisine} food. Ssuggest a  fancy name for the cafe"
+)
+prompt_template_name.format(cuisine="Italian")
 
+//LLMChain
 
+from langchain.chains import LLMChain
 
+chain = LLMChain(llm=llm,prompt=prompt_template_name)
+chain.run("Indian")
 
+//Sequential Chain
 
+llm = OpenAI(temperature=0.6) #where temperature setting from 0 to 1 if 0 its safe , if 1 gives worst but that will be creative
 
+prompt_template_name = PromptTemplate(
+   input_variables = ['Cafe_Name'],
+   template = "Suggest me some menu items for {Cafe_Name}.Return it as a comma seperated list "
+)
+food_items_chain = LLMChain(llm=llm, prompt=prompt_template_items)
 
+from langchains.chains import SimpleSequentialChain
 
+chain = SimpleSequentialChain(chains = [name_chain, food_items_Chain])
+response = chain.run("Indian")
+print(response)
+
+//SimpleSequentialChain => can take one input and gives one output
+//SequentialChain => can take multiple inputs and multiple outputs
+
+llm = OpenAI(temperature=0.6
+
+prompt_template_name = PromptTemplate(
+   input_variables = ['Cafe_Name'],
+   template = "Suggest me some menu items for {Cafe_Name}.Return a fancy name "
+)
+name_chain = LLMChain(llm=llm, prompt=prompt_template_items,output_keys = "Cafe_Name")
+
+llm = OpenAI(temperature=0.6
+
+prompt_template_name = PromptTemplate(
+   input_variables = ['Cafe_Name'],
+   template = "Suggest me some menu items for {Cafe_Name}. "
+)
+food_items_chain = LLMChain(llm=llm, prompt=prompt_template_items,output_keys = "menu_items")
+
+from langchain.chains import SequentialChain
+
+chain = SequentialChain(
+     chains = [name_chain,food_items_chain],
+     input_variables=['cuisine']
+     output_variables=['Cafe_Name','menu_items']
+)
+chain({'cuisine':'French'})
 
 
 
