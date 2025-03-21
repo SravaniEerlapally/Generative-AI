@@ -13,9 +13,15 @@ When data is short, it done in this way.
 
 When data is large we use LLM(Large Language Models) i.e GPT-4 175 Billion Parameters
 
+LLM-RLHF[Reinforcement Learning with Human Feedback]
 
+Embeddings->  numeric representation of text in form of vector such that we capture the meaning of text
+ we can do math with the text
+eg:Paris-France+India = Delhi ii) Apple - TimKook + Satya Nadella = Microsoft
 
-
+Semantic Search -> searching using the context of that sentence . Internally uses word embedding
+VectorDatabse->
+  - used to do faster and Optimize Storage
 
 
 
